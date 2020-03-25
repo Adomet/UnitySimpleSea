@@ -7,7 +7,6 @@ public class Waves : MonoBehaviour
 {
     //Public Properties
     public int Dimension = 10;
-    public float VertScale = 1f;
     public float UVScale = 2f;
     public Octave[] Octaves;
 
@@ -144,17 +143,17 @@ public class Waves : MonoBehaviour
                 {
                     if (Octaves[o].alternate)
                     {
-                        var perl = Mathf.PerlinNoise((x * Octaves[o].scale.x*VertScale) / Dimension, (z * Octaves[o].scale.y * VertScale) / Dimension) * Mathf.PI * 2f;
+                        var perl = Mathf.PerlinNoise((x * Octaves[o].scale.x) / Dimension, (z * Octaves[o].scale.y) / Dimension) * Mathf.PI * 2f;
                         y += Mathf.Cos(perl + Octaves[o].speed.magnitude * Time.time) * Octaves[o].height;
                     }
                     else
                     {
-                        var perl = Mathf.PerlinNoise((x * Octaves[o].scale.x * VertScale + Time.time * Octaves[o].speed.x) / Dimension, (z * Octaves[o].scale.y * VertScale + Time.time * Octaves[o].speed.y) / Dimension) - 0.5f;
+                        var perl = Mathf.PerlinNoise((x * Octaves[o].scale.x + Time.time * Octaves[o].speed.x) / Dimension, (z * Octaves[o].scale.y + Time.time * Octaves[o].speed.y) / Dimension) - 0.5f;
                         y += perl * Octaves[o].height;
                     }
                 }
 
-                verts[index(x, z)] = new Vector3(x*VertScale, y, z*VertScale);
+                verts[index(x, z)] = new Vector3(x, y, z);
             }
         }
         Mesh.vertices = verts;
