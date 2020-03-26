@@ -70,12 +70,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_3C4F7EAE: 8
-    - Vector1_73A375D5: 4
-    - Vector1_90647AA: 5
-    - Vector1_95E9EA43: 0.25
+    - Vector1_3C4F7EAE: 5
+    - Vector1_73A375D5: 5
+    - Vector1_90647AA: 10
+    - Vector1_95E9EA43: 0.3
     - Vector1_ADDFA50: 0.8
-    - Vector1_B6C51AAA: 3
+    - Vector1_B6C51AAA: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1

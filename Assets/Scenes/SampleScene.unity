@@ -267,12 +267,12 @@ MonoBehaviour:
   Dimension: 50
   UVScale: 10
   Octaves:
-  - speed: {x: 2, y: 2}
+  - speed: {x: 1, y: 1}
     scale: {x: 20, y: 20}
-    height: 0.1
+    height: 0.2
     alternate: 1
-  - speed: {x: 10, y: 20}
-    scale: {x: 1, y: 20}
+  - speed: {x: 5, y: 20}
+    scale: {x: 3, y: 20}
     height: 2
     alternate: 0
 --- !u!1 &297056444

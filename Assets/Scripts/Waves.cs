@@ -144,7 +144,7 @@ public class Waves : MonoBehaviour
                     if (Octaves[o].alternate)
                     {
                         var perl = Mathf.PerlinNoise((x * Octaves[o].scale.x) / Dimension, (z * Octaves[o].scale.y) / Dimension) * Mathf.PI * 2f;
-                        y += Mathf.Cos(perl + Octaves[o].speed.magnitude * Time.time) * Octaves[o].height;
+                        y += 1-Mathf.Abs(Mathf.Cos(perl + Octaves[o].speed.magnitude * Time.time) * Octaves[o].height);
                     }
                     else
                     {
